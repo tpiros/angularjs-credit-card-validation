@@ -18,6 +18,7 @@ angular.module('filters', []).
 filter('validate', [function () {
     return function (ccnumber) {
       if (!ccnumber) { return ''; }
+      ccnumber = ccnumber.toString().replace(/\s+/g, '');
       var len = ccnumber.length;
       var cardType, valid;
       mul = 0,
@@ -34,7 +35,7 @@ filter('validate', [function () {
       } else {
         valid = "not valid"
       }
-      ccnumber = ccnumber.toString().replace(/\s+/g, '');
+      
 
       if(/^(34)|^(37)/.test(ccnumber)) {
         cardType = "American Express";
