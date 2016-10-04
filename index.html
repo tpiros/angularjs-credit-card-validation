@@ -37,8 +37,8 @@ filter('validate', [function () {
 
     // All data pulled from http://en.wikipedia.org/wiki/Bank_card_number#Issuer_identification_number_.28IIN.29
 
-    // Some regexes were created with the help of "Regex_For_Range" on Utility Mill by Greg Pinero
-    // [http://utilitymill.com/utility/Regex_For_Range]
+    // Some regexes were created with the help of
+    // [http://gamon.webfactional.com/regexnumericrangegenerator/]
 
     // There are some minor issues with length validation. See NOTEs below.
     
@@ -139,8 +139,8 @@ filter('validate', [function () {
       },
       {
         "name":   "MasterCard",
-        "iin":    "50-55",
-        "regex":  /^5[0-5]/,
+        "iin":    "2221-2720, 50-55",
+        "regex":  /^((222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)|5[1-5])/,
         "active": true, "min": 16, "max": 16, "luhn": true,
       },
       {
